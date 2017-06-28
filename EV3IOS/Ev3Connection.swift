@@ -79,7 +79,7 @@ public class Ev3Connection : NSObject, StreamDelegate {
             return
         }
         
-        let session = EASession(accessory: self.accessory, forProtocol: Ev3Constants.supportedProtocol)
+        let session = EASession(accessory: self.accessory, forProtocol: Ev3Constants.supportedProtocol)!
         self.session = session
         
         session.outputStream?.delegate = self
