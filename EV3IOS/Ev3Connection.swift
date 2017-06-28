@@ -125,6 +125,7 @@ public class Ev3Connection : NSObject, StreamDelegate {
         session?.inputStream?.remove(from: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
         session?.inputStream?.delegate = nil
         
+        session = nil
         isClosed = true
     }
     
